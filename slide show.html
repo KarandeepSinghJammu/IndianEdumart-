@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Controllable Slider</title>
+    <style type="text/css">
+    body {margin:0; padding:0;}
+    /* Styles for the slider container */
+    .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height:600px;
+    }
+    
+    /* Styles for the slider */
+    .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    }
+    
+    /* Styles for the images in the slider */
+    .slider img {
+    width:100%;
+    box-shadow:0px 0px 300000px navy;
+    }
+    
+    /* Styles for slider controls */
+    .slider-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    }
+    
+    /* Styles for the control buttons */
+    .slider-controls button {
+    padding: 0px 12px;
+    background-color: #007bff;
+    margin-top:-150px;
+    position:relative;
+    color: white;
+    border: none;
+    height:40px;
+    cursor: pointer;
+    border-radius:5px;
+    margin-left:10px;
+    margin-right:10px;
+    opacity:90%;
+    border:1px solid navy;
+    }
+    
+    /* Hover effect for buttons */
+    .slider-controls button:hover {
+    background-color: #0056b3;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="slider-container"><br><br><br>
+        <div class="slider">
+            <img src="img/ads.jpg"  alt="Image 1">
+            <img src="karan/10th.jpg" alt="Image 2">
+            <img src="karan/11th.jpg"  alt="Image 3">
+            <img src="karan/12th.jpg"  alt="Image 4">
+            
+        </div>
+        <div class="slider-controls">
+            <button id="prevBtn">《</button>
+            <button id="nextBtn">》</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+    const slider = document.querySelector('.slider');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let slideIndex = 0;
+    
+    function showSlide() {
+    const translateX = -slideIndex * 100;
+    slider.style.transform = `translateX(${translateX}%)`;
+    }
+    
+    function prevSlide() {
+    slideIndex--;
+    if (slideIndex < 0) {
+    slideIndex = slider.children.length - 1;
+    }
+    showSlide();
+    }
+    
+    function nextSlide() {
+    slideIndex++;
+    if (slideIndex >= slider.children.length) {
+    slideIndex = 0;
+    }
+    showSlide();
+    }
+    
+    // Add click event listeners to the control buttons
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    
+    // Auto slide every 3 seconds (adjust the time interval as needed)
+    setInterval(nextSlide, 3000);
+    
+    </script>
+</body>
+</html>

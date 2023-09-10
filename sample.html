@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+.card{
+width:80%;
+height:100px;
+border:1px solid #ddd;
+background:#fff;
+border-radius:10px;
+vertical-align:middle;
+display:grid;
+}
+
+.img{
+width:90px;
+height:90px;
+background:navy;
+margin:3px;
+border-radius:10px;
+}
+
+.img1{
+width:90px;
+height:90px;
+background:navy;
+margin:10px;
+border-radius:10px;
+}
+
+.heading{
+font-weight:bolder;
+font-size:20px;
+color:black;
+}
+
+.para {color:black;}
+
+.img, .heading, .para.loading{
+background:#b8b8b8;
+color:#b8b8b8;
+}
+
+</style>
+</head>
+<body>
+<div class="card" >
+<table><tr><td>
+<div class="img loading" ></div></td><td>
+<div class="heading loading" >Hello!</div><br>
+<div class="para loading" >welcome to my new blog!</div>
+</td></tr></table>
+</div>
+
+<script type="text/javascript">
+setTimeout(() =>{
+fetchData()
+}, 2000)
+
+function fetchData(){
+const img = document.querySelector('.img')
+const heading = document.querySelector('.heading')
+const para = document.querySelector('.para')
+
+img.innerHTML = "<img class='img1' src='./img/logo.png'>"
+img.classList.removeClass('loading')
+
+heading.innerHTML = "<div class='heading' style='color:black; background:#fff;'> Hello!</div>"
+heading.classList.remove('loading')
+
+}
+</script>
+</body>
+</html>

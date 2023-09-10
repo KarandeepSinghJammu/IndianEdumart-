@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<link rel="stylesheet" href="style.css" >
+<title>Indian Edumart</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Oswald:wght@500&display=swap');
+  
+  #show{
+  color:navy;
+  font-family:Arial,sans-serif;
+  }
+  
+  #hide{
+  color:navy;
+  font-family:Arial,sans-serif;
+  }
+  
+</style>
+<title>Indian Edimart</title>
+</head>
+<body>
+<header>
+<h1>Indian Edumart</h1>
+<br><br>
+</header>
+<br><br><br>
+<h1><font color="navy" >Sign In form:</font></h1>
+<form action="mailto:karanjammu5911@gmail.com" method="post" enctype="text/plain" >
+<table><tr>
+<td width="20%" >Name</td>
+<td width="70%" colspan="2"  ><input type="name" name="name" style="text-transform:uppercase;"   placeholder="Name i.e. ABC"  class="input" required="required" ></td></tr>
+<tr><td>Username Id </td>
+<td colspan="2" ><input class="input" name="id" maxlength="15"  type="id" style="text-transform:lowercase;"  placeholder="Enter 15 digit id i.e. abc.example" required="required"    ></td></tr>
+<tr><td>Password</td>
+<td width="60%" ><input class="input" id="password" style="border-top-right-radius:0; border-bottom-right-radius:0; width:100%;"  maxlength="6"  type="password" name="password" placeholder="Set a 6 digit strong password i.e." required="required"  > 
+</td><td><div class="input" style="padding:1px; border-top-left-radius:0; border-bottom-left-radius:0; width:100%;"  >
+<font id="show"  onclick="show()">Show</font>
+<font id="hide" style="font-size:0;" onclick="hide()">Hide</font></div></td></tr>
+<tr><td>E-Mail Id</td>
+<td colspan="2" ><input name="email" style="text-transform:lowercase;"   class="input" type="email"  placeholder="i.e. abc@example.com" required="required"  ></td></tr>
+<tr><td>Contact Number</td>
+<td colspan="2" ><select class="select" ><option>+91</option></select><input name="mb" style="width:77.5%;"  class="input1" placeholder="i.e. 00000 00000"  maxlength="10"  required="required"  ></td></tr></table>
+<input class="cb"  type="checkbox" name="agree with terms and condition" required="required"  ><b>I am agree with <a href="#" >tearms & conditions</a> and <a href="#" >privacy policy</a> of Indian Edumart.</b>
+<button type="submit" >Agree & Submit</button></form>
+<a href="home.html" ><button type="cancel" class="cancel" >Back to home</button></a>
+
+<script type="text/javascript">
+function show(){
+document.getElementById('password').type="text"
+document.getElementById('show').style="font-size:0;"
+document.getElementById('hide').style="font-size:20px;"
+}
+
+function hide(){
+document.getElementById('password').type="password"
+document.getElementById('hide').style="font-size:0;"
+document.getElementById('show').style="font-size:20px;"
+}
+
+</script>
+<!--footer-->
+<br>
+<footer>
+<div class="footer" >
+Indian Edumart copyright &copy;, All right reserved</div><br><br></footer>
+<!--end-footer-->
+
+<div class="box-2" >
+<hr class="hr1" id="hr"  onclick="document.getElementById('box').style.height='auto'"><hr class="hr1"  onclick="document.getElementById('box').style.height='auto'"><hr class="hr1"  onclick="document.getElementById('box').style.height='auto'">
+</div>
+
+<div id="box"  class="box-1" >
+<p align="right" ><h3 onclick="document.getElementById('box').style.height='0px'"><div class="close" >×</div></h3></p>
+<img src="./img/banner.jpg" >
+<a href="signin.html"  ><div class="selected" >Sign In</a><br></div>
+<a href="home.html" >Home</a><br>
+<a href="video.html" >Select your Teacher</a><br>
+<a href="money.html" >Digital Transaction</a><br>
+<a href="announcement.html" >Impotant Announcements</a><br>
+<a href="library.html" >Saved Material</a><br>
+<a href="welcomeshopping.html" >Shopping Point</a><br>
+<a href="https://wa.me/919781680384?text=hello" >Contact us</a>
+
+</div>
+</body>
+</html>
